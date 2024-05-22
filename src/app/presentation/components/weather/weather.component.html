@@ -1,1 +1,37 @@
-<p>weather works!</p>
+<main class="p-4 m-5">
+  <button
+    (click)="goHome()"
+    class="absolute top-0 left-0 mt-4 ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    title="back to all weather locations"
+  >
+    Back
+  </button>
+
+  @if (locationFounded) {
+  <div class="block w-4/5 h-96 mx-auto mt-10">
+    <canvas
+      baseChart
+      class="w-full h-full"
+      [type]="'line'"
+      [data]="lineChartData"
+      [options]="lineChartOptions"
+      [legend]="lineChartLegend"
+    >
+    </canvas>
+  </div>
+
+  } @else {
+  <main class="flex items-center justify-center min-h-screen">
+    <section class="bg-gray-100 p-4 rounded-lg shadow-md m-4 text-center">
+      <h4 class="text-3xl font-bold py-5">
+        No weather location available right now based on "{{ location }}"
+        acronym
+      </h4>
+      <p class="font-bold pb-5">
+        Retry in a few minutes, otherwise contact our support center.
+      </p>
+    </section>
+  </main>
+
+  }
+</main>
