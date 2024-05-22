@@ -30,7 +30,7 @@ export class WeatherForecastLocationService
 
   public getById(id: string): Observable<WeatherForecastLocation | null> {
     const location = this.weatherForecastLocation.find(
-      (location) => location.id === id
+      (location) => location.id.toUpperCase() === id.toUpperCase()
     );
     return of(location ?? null);
   }
