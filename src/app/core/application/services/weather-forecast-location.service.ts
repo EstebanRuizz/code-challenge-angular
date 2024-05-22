@@ -35,6 +35,16 @@ export class WeatherForecastLocationService
     return of(location ?? null);
   }
 
+  public getByLocationAcronym(
+    acronym: string
+  ): Observable<WeatherForecastLocation | null> {
+    const location = this.weatherForecastLocation.find(
+      (location) =>
+        location.locationAcronym.toUpperCase() === acronym.toUpperCase()
+    );
+    return of(location ?? null);
+  }
+
   public getPaginated(
     page: number,
     pageSize: number
