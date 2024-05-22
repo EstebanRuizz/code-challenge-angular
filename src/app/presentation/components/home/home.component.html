@@ -1,1 +1,12 @@
-<p>home works!</p>
+<h1 class="text-3xl font-bold underline">Weather forecast</h1>
+
+<main>
+  @for (location of weatherLocations; track location.id) {
+  <section>
+    <p>{{ location.id }}. {{ location.locationName }}</p>
+    <button (click)="viewForecastByAcronym(location.id)">view forecast</button>
+  </section>
+  } @empty {
+  <span>Empty list of locations</span>
+  }
+</main>
