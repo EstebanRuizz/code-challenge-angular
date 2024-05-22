@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   private notifyElementsLoaded(): void {
-    this.toast.success('Locations loaded successfully');
+    this.toast.success('Locations loaded successfully!');
   }
 
   private notFoundWeatherLocation(): void {
