@@ -6,19 +6,47 @@
   >
     Back
   </button>
+  <!-- sm md lg xl -->
 
   @if (locationFounded) {
-  <div class="block w-4/5 h-96 mx-auto mt-10">
-    <canvas
-      baseChart
-      class="w-full h-full"
-      [type]="'line'"
-      [data]="lineChartData"
-      [options]="lineChartOptions"
-      [legend]="lineChartLegend"
-    >
-    </canvas>
+  <div
+    class="block mx-auto mt-10 overflow-x-auto
+      sm:w-11/12 sm:h-full
+      md:w-11/12 md:h-full md:overflow-x-visible
+      lg:w-full lg:h-full
+    "
+  >
+    <div class="w-[1000px] sm:h-full sm:w-full md:w-full md:h-full">
+      <canvas
+        baseChart
+        class="w-full h-full sm:h-full sm:w-full
+          md:w-11/12 md:h-full
+          lg:w-11/12 lg:h-full
+        "
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+      >
+      </canvas>
+    </div>
   </div>
+
+  <!-- <div
+    class="block w-11/12 h-96 mx-auto mt-10 overflow-x-auto md:overflow-x-visible"
+  >
+    <div class="w-[1000px] md:w-full">
+      <canvas
+        baseChart
+        class="w-full h-full"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+      >
+      </canvas>
+    </div>
+  </div> -->
 
   } @else {
   <main class="flex items-center justify-center min-h-screen">

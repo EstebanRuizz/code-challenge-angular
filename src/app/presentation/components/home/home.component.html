@@ -1,8 +1,9 @@
-<h2 class="text-3xl font-bold underline text-center p-5">Weather forecast</h2>
-
-<main>
+<h2 class="text-3xl font-bold text-center p-5">Weather forecast</h2>
+<main class="block sm:flex lg:flex xl:flex items-center justify-center">
   @for (location of weatherLocations; track location.id) {
-  <section class="bg-gray-100 p-4 rounded-lg shadow-md m-4 ">
+  <section
+    class="bg-gray-100 m-4 p-4 rounded-lg shadow-md sm:w-10/12 md:w-10/12 lg:w-8/12 xl:w-4/12"
+  >
     <p class="text-xl font-semibold mb-2">
       {{ location.locationName }}
     </p>
