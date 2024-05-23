@@ -6,23 +6,15 @@
   >
     Back
   </button>
-  <!-- sm md lg xl -->
 
   @if (locationFounded) {
   <div
-    class="block mx-auto mt-10 overflow-x-auto
-      sm:w-11/12 sm:h-full
-      md:w-11/12 md:h-full md:overflow-x-visible
-      lg:w-full lg:h-full
-    "
+    class="block mx-auto mt-10 overflow-x-auto sm:w-11/12 sm:h-5/6 md:w-11/12 md:h-5/6 md:overflow-x-visible lg:w-10/12 lg:h-4/6 xl:w-10/12 xl:h-4/6"
   >
     <div class="w-[1000px] sm:h-full sm:w-full md:w-full md:h-full">
       <canvas
         baseChart
-        class="w-full h-full sm:h-full sm:w-full
-          md:w-11/12 md:h-full
-          lg:w-11/12 lg:h-full
-        "
+        class="w-full h-full sm:h-full sm:w-full md:w-11/12 md:h-full lg:w-11/12 lg:h-full xl:w-full xl:h-5/6"
         [type]="'line'"
         [data]="lineChartData"
         [options]="lineChartOptions"
@@ -31,23 +23,6 @@
       </canvas>
     </div>
   </div>
-
-  <!-- <div
-    class="block w-11/12 h-96 mx-auto mt-10 overflow-x-auto md:overflow-x-visible"
-  >
-    <div class="w-[1000px] md:w-full">
-      <canvas
-        baseChart
-        class="w-full h-full"
-        [type]="'line'"
-        [data]="lineChartData"
-        [options]="lineChartOptions"
-        [legend]="lineChartLegend"
-      >
-      </canvas>
-    </div>
-  </div> -->
-
   } @else {
   <main class="flex items-center justify-center min-h-screen">
     <section class="bg-gray-100 p-4 rounded-lg shadow-md m-4 text-center">
@@ -60,6 +35,5 @@
       </p>
     </section>
   </main>
-
   }
 </main>
