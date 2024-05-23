@@ -14,4 +14,9 @@ export const routes: Routes = [
         (c) => c.WeatherComponent
       ),
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
