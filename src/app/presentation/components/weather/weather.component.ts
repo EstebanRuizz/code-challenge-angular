@@ -22,6 +22,7 @@ export class WeatherComponent implements OnInit {
   public location: string = '';
   public locationFounded: boolean = false;
   public sourceForecast!: ISourceForecast;
+  private readonly liteBlue: string = 'rgb(75, 192, 192)';
 
   constructor(
     private readonly router: Router,
@@ -76,19 +77,19 @@ export class WeatherComponent implements OnInit {
           },
           tension: 0.5,
           borderWidth: 5,
-          borderColor: 'rgb(55,55,150)',
+          borderColor: this.liteBlue,
           backgroundColor: 'transparent',
           hoverBackgroundColor: 'gray',
           borderCapStyle: 'round',
-          pointRadius: 13,
+          pointRadius: 10,
           pointHitRadius: 100,
           pointBorderWidth: 1,
           pointStyle: 'circle',
           pointHoverRadius: 10,
           pointHoverBorderWidth: 12,
           pointBackgroundColor: 'white',
-          pointBorderColor: 'rgb(55,55,150)',
-          pointHoverBackgroundColor: 'rgb(55,55,150)',
+          pointBorderColor: this.liteBlue,
+          pointHoverBackgroundColor: this.liteBlue,
           borderJoinStyle: 'round',
           hoverBorderDash: [80],
         },
@@ -103,7 +104,7 @@ export class WeatherComponent implements OnInit {
     datasets: [
       {
         data: [],
-        label: 'Series A',
+        label: '',
         fill: true,
         tension: 0.5,
         borderColor: 'black',
@@ -119,8 +120,8 @@ export class WeatherComponent implements OnInit {
     scales: {
       y: {
         ticks: {
-          color: 'green',
-          font: { size: 14, family: 'Arial', weight: 'lighter' },
+          color: this.liteBlue,
+          font: { size: 14, family: 'Arial', weight: 'bold' },
           callback: (value, index, values) => `${value}° F`,
           align: 'start',
           padding: 13,
