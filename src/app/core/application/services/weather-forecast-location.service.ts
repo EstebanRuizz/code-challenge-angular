@@ -1,7 +1,7 @@
+import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { WeatherForecastLocation } from '../../domain/entities/WeatherForecastLocation';
 import { IRepositoryAsync } from '../interfaces/IRepositoryAsync';
-import { map, Observable, of } from 'rxjs';
+import { WeatherForecastLocation } from '../../domain/entities/WeatherForecastLocation';
 
 @Injectable({
   providedIn: 'root',

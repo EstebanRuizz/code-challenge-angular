@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { catchError, switchMap } from 'rxjs/operators';
+import { ISourceForecast } from '../interfaces/ISourceForecast';
 import { WeatherForecastLocationService } from './weather-forecast-location.service';
 import { WeatherForecastLocation } from '../../domain/entities/WeatherForecastLocation';
-import { ISourceForecast } from '../interfaces/ISourceForecast';
 
 @Injectable({
   providedIn: 'root',
